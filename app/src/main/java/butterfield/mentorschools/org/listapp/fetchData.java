@@ -67,7 +67,11 @@ public class fetchData extends AsyncTask<String,String,String> {
         super.onPostExecute(result);
         //inDepthAnalysis.companyName.setText(result);
         try {
-            inDepthAnalysis.Open.setText(new ParseJson(result).parse());
+            inDepthAnalysis.Open.setText(new ParseJson(result).parse().get(0));
+            inDepthAnalysis.close.setText(new ParseJson(result).parse().get(1));
+            inDepthAnalysis.dailyhigh.setText(new ParseJson(result).parse().get(2));
+            inDepthAnalysis.dailyLow.setText(new ParseJson(result).parse().get(3));
+            inDepthAnalysis.vol.setText(new ParseJson(result).parse().get(4));
         } catch (JSONException e) {
             e.printStackTrace();
         }

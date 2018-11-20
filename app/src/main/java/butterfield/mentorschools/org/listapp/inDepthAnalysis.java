@@ -18,6 +18,10 @@ public class inDepthAnalysis extends AppCompatActivity {
     public static TextView companyName;
     public static TextView companyTicker;
     public static TextView Open;
+    public static TextView close;
+    public static TextView dailyhigh;
+    public static TextView dailyLow;
+    public static TextView vol;
     Button followUnfollow;
 
     @Override
@@ -31,6 +35,11 @@ public class inDepthAnalysis extends AppCompatActivity {
         companyName = (TextView) findViewById(R.id.companyName);
         companyTicker = (TextView) findViewById(R.id.companyTicker);
         Open = (TextView) findViewById(R.id.open);
+        close = (TextView) findViewById(R.id.previousClose);
+        dailyhigh = (TextView) findViewById(R.id.dailyHigh);
+        dailyLow = (TextView) findViewById(R.id.dailyLow);
+        vol = (TextView) findViewById(R.id.shareVolume);
+
         followUnfollow = (Button) findViewById(R.id.followUnfollow);
 
         new fetchData().execute("http://13.59.22.125/" + tickerInput);
