@@ -2,6 +2,13 @@
     <string name="app_name">List App</string>
     <string name="companyName">Company Name</string>
     <string name="companyOpen">Open</string>
+    <string-array name="tickers">
+        <item>aapl:Apple</item>
+        <item>googl:Google</item>
+        <item>msft:Microsoft</item>
+        <item>xom:Exon Mobile</item>
+        <item>hd:Home Depot</item>
+    </string-array>
 
     <string-array name="items">
         <item>Apple</item>
